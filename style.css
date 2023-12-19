@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    position: relative;
+}
+body{
+    background: #222;
+    min-height: 100dvh;
+}
+.timeLineSection{
+    position: relative;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+
+    .timeLineItem:nth-child(2n+1){
+        float: left;
+        text-align: right;
+        .timeLineDot{
+            right: -8px;
+        }
+        .timeLineDate{
+            margin-right: 10px;
+        }
+        .timeLineContent{
+            margin-right: 8px;
+        }
+        @media (max-width: 600px) {
+            float: right;
+            align-self: flex-start;
+            text-align: left;
+            .timeLineDot{
+                left: -8px;
+            }
+            .timeLineDate{
+                margin-left: 10px;
+            }
+            .timeLineContent{
+                margin-left: 8px;
+            }
+        }
+    }
+    .timeLineItem:nth-child(2n){
+        float: right;
+        align-self: flex-end;
+        .timeLineDot{
+            left: -8px;
+        }
+        .timeLineDate{
+            margin-left: 10px;
+        }
+        .timeLineContent{
+            margin-left: 8px;
+        }
+        @media (max-width: 600px) {
+            align-self: flex-start;
+        }
+    }
+    .timeLineItem{
+        width: auto;
+        width: 50%;
+        margin-top: 70px;
+        height: auto;
+
+        .timeLineDate{
+            font-weight: bold;
+            color: #fff;
+        }
+        .timeLineDot{
+            position: absolute;
+            top: 4px;
+            background: #f00;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+        }
+        .timeLineContent{
+            border: thin solid black;
+            padding: 10px;
+            border-radius: 10px;
+            background: #fff;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            width: 90%;
+            margin-left: 0;
+            left: 5%;
+        }
+    }
+    @media (max-width: 600px) {
+        padding: 0;
+        margin-bottom: 100px;
+    }
+}
+.lineCenter{
+    position: fixed;
+    background: #fff;
+    width: 2px;
+    height: 100dvh;
+    left: calc(50% - 1px);
+    @media (max-width: 600px) {
+        left: 5%;
+    }
+}
